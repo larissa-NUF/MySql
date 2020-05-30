@@ -1,0 +1,49 @@
+insert into livro (titulo, autor, editora,genero) values
+('Java Studio','fulano de tal','NovaTEc','didatico'),
+('A Guerra (1914-1918) o Primeiro Ano','Julio Mesquita','Terceiro Nome','histórico'),
+(' O Livro que Lê Gente','Alexandre de Castro Gomes','Cortez','infantil'),
+('O Ele Falante','Bill Borges','Elementar','infantil'),
+('Allegro','Fernando Portela','Terceiro Nome','aventura'),
+('Coraline','Neil Gaiman','Bloomsbury','mistério'),
+('Diário de um Banana','Jeff Kinney','New York','aventura'),
+('A Noiva do Condutor','Noel Rosa','Terceiro Nome','romance'),
+('Era Uma Vez o Lobo Mingau','Alessandra Roscoe','Saber e Ler','infantil'),
+('O Pequeno Príncipe','Antoine de Saint-Exupéry' ,'Melhoramentos','novela'),
+('Dançando Com o Inimigo','Vinicius Campos','Terceiro Nome','aventura'),
+('Amor e ódio','ciclano de tal','Érica','Romance');
+
+insert into cliente (nome,email,telRes,turma,dataNas) values
+('Cintia Pinho','cinti@gmail.com','14-666666','1c','1981-12-21'),
+('Francisco José Campos','franciscojosecampos_@hotmail.fr','23-2345-5523','2a','1956-11-25'),
+('Eduarda Rayssa Daniela Vieira','eduardarayssadanielavieira@pss.adv.br','11-2233-2332','1i','2000-02-23'),
+('Caio Kauê Julio Barros','caiokauejuliobarros-90@polifiltro.com.br','32-4545-6765','2b','2002-12-21'),
+('Caleb Bruno Carlos Cardoso','ccalebbrunocarloscardoso@formulaweb.com.br','11-2345-6789','1c','2005-04-11'),
+('Pedro Henrique Anthony Benjamin Freitas','pedrohenriqueanthonybenjaminfreitas_@uninet.com.br','66-6666-6666','1d','2006-01-30'),
+('Aline Beatriz Silva','alinebeatrizsilva_@gaviola.com','12-3214-4563','3d','2010-11-11'),
+('Pedro André Dias','pedroandredias-84@mrarquitetura.com.br','54-3232-4233','1c','2009-03-11'),
+('Augusto Tiago Silva','augustotiagosilva-97@metroquali.com.br','43-4344-4344','1a','2010-03-11'),
+('Flávia Lorena Sophia Santos','flavialorenasophiasantos-83@fundasa.com.br','77-5443-4322','1b','2003-05-19'),
+('Vitória Andrea Vera Bernardes','vitoriaandreaveraberndreaverabernardes@smalte.com.br','11-2345-5433','1c','2002-11-26'),
+('Jennifer Marina Adriana Porto','jennifermarinaadrianaporto_@alvesbarcelos.com.br','11-2332-5454','2a','1993-04-16'),
+('Larissa Pinho','larissa@gmail.com','11-6664444','2c','1979-06-10');
+
+insert into bibliotecario (nome,email,cpf,telefone,cidade,uf,dataNas) values
+('Cauê Rodrigo Anderson Lopes','cauerodrigoandersonrodrigoandersonlopes@uninet.com.br','736.117.538-40','11-7654-6534','Manaus','AM','1945-11-06'),
+('Fábio Sérgio Corte Real','ffabiosergiocortereal@realweb.com.br','840.146.210-06','32-3332-4242','Marabá','PA',''),
+('Nina Carolina Farias','ninacarolinafariarolinafarias@michaelpage.com.br','799.692.177-63','11-3232-3767','Gurupi','TO','1978-08-27'),
+('Alberto Souza','alberto@gmail.com','456.654.654-54','11-23456-6543','Mauá','SP','1990-10-01');
+
+insert into emprestimo_devolucao (codFuncionario,codLivro,dataDevolucao,dataEmprestimo,ra) values
+(1,1,'2020-05-16','2020-05-27',1),
+(1,2,'2020-07-10','2020-05-23',2),
+(2,10,'2020-07-10','2020-05-18',2),
+(2,8,'2020-12-12','2020-12-27',3),
+(3,2,'2020-03-09','2020-05-17',4),
+(4,7,'2020-01-06','2020-02-27',5),
+(4,6,'2020-06-20','2020-11-06',6),
+(4,9,'2020-09-30','2020-12-27',7),
+(2,9,'2020-08-25','2020-07-16',8),
+(1,1,'2020-07-19','2020-02-07',9),
+(3,3,'2020-11-02','2020-10-24',10),
+(4,5,'2020-05-10','2020-09-27',11),
+(1,2,'2020-02-07','2020-07-07',12);
