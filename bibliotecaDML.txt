@@ -27,11 +27,11 @@ insert into cliente (nome,email,telRes,turma,dataNas) values
 ('Jennifer Marina Adriana Porto','jennifermarinaadrianaporto_@alvesbarcelos.com.br','11-2332-5454','2a','1993-04-16'),
 ('Larissa Pinho','larissa@gmail.com','11-6664444','2c','1979-06-10');
 
-insert into bibliotecario (nome,email,cpf,telefone,cidade,uf,dataNas) values
-('Cauê Rodrigo Anderson Lopes','cauerodrigoandersonrodrigoandersonlopes@uninet.com.br','736.117.538-40','11-7654-6534','Manaus','AM','1945-11-06'),
-('Fábio Sérgio Corte Real','ffabiosergiocortereal@realweb.com.br','840.146.210-06','32-3332-4242','Marabá','PA',''),
-('Nina Carolina Farias','ninacarolinafariarolinafarias@michaelpage.com.br','799.692.177-63','11-3232-3767','Gurupi','TO','1978-08-27'),
-('Alberto Souza','alberto@gmail.com','456.654.654-54','11-23456-6543','Mauá','SP','1990-10-01');
+insert into bibliotecario (nome,email,cpf,telefone,cidade,uf,dataNas,rg) values
+('Cauê Rodrigo Anderson Lopes','cauerodrigoandersonrodrigoandersonlopes@uninet.com.br','736.117.538-40','11-7654-6534','Manaus','AM','1945-11-06','38.348.118-1'),
+('Fábio Sérgio Corte Real','ffabiosergiocortereal@realweb.com.br','840.146.210-06','32-3332-4242','Marabá','PA','1992-04-10','17.395.444-3'),
+('Nina Carolina Farias','ninacarolinafariarolinafarias@michaelpage.com.br','799.692.177-63','11-3232-3767','Gurupi','TO','1978-08-27','37.866.817-1'),
+('Alberto Souza','alberto@gmail.com','456.654.654-54','11-23456-6543','Mauá','SP','1990-10-01','18.546.979-6');
 
 insert into emprestimo_devolucao (codFuncionario,codLivro,dataDevolucao,dataEmprestimo,ra) values
 (1,1,'2020-05-16','2020-05-27',1),
