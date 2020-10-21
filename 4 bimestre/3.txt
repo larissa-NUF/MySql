@@ -1,0 +1,95 @@
+use jornal_escolar;
+
+Insert into categoria (categoria) values
+('Suspense'),
+('Assassinato'),
+('Sequestro'),
+('Furto'),
+('Clima'),
+('História de vida'),
+('Reportagem');
+
+Insert into anoSala (sala,ano) values
+('A','1'),
+('B','1'),
+('C','1'),
+('D','1'),
+('E','1'),
+('F','1'),
+('A','2'),
+('B','2'),
+('C','2'),
+('D','2'),
+('A','3'),
+('B','3'),
+('C','3'),
+('D','3');
+
+Insert into funcao (funcao) values
+('Diretor chefe'),
+('Editor'),
+('Revisor'),
+('Reporter'),
+('Fotografo');
+
+Insert into redator (email,rua,logradouro,complemento,cidade,cep,num,uf,bairro,rg,rm,nasDia,dasMes,nasAno,sobrenome,nome,cpf,telFixo,telCel,telRecado,telOutro,codAnoSala) values
+('Mari@gmail.com','av.francisco moteiro','av.francisco moteiro','b','Ribeirão Pires','453-45678','56','SP','Santana','57839452','45769',12,12,2000,'Felix','Maria','65264836472','1164736789','11967564567','11967895678','1194567890',1),
+('Valder@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48878','56','SP','Santana','57899452','45769',12,12,2000,'Hix','valder','65269936472','1164799789','11967564567','11967895678','1194567890',2),
+('Vanin@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48478','56','SP','Santana','57899452','44469',12,11,2000,'Hix','vanin','65264436472','1164499789','11467564567','11944895678','1194567890',3),
+('Vinicius@yahoo.com','av.marcio moteiro','av.marcio monteiro','a','Ribeirão Pires','453-47878','56','RJ','Santana','57899452','45769',04,12,2000,'Hix','vinicius','65269936472','1164799789','11967564567','11967895678','1194567890',6),
+('Catarine@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-58878','56','SP','Santana','57877452','45777',12,12,2010,'da silva','catarina','65277936472','1164799789','11967564567','11967895678','1194577890',8);
+
+
+Insert into funcionario (email,rua,logradouro,complemento,cidade,cep,num,uf,bairro,rg,rm,nasDia,dasMes,nasAno,sobrenome,nome,cpf,telFixo,telCel,telRecado,telOutro,codAnoSala) values
+('Mari@gmail.com','av.francisco moteiro','av.francisco moteiro','b','Ribeirão Pires','453-45678','56','SP','Santana','57839452','45769',12,12,2000,'Felix','Maria','65264836472','1164736789','11967564567','11967895678','1194567890',1),
+('Valder@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48878','56','SP','Santana','57899452','45769',12,12,2000,'Hix','valder','65269936472','1164799789','11967564567','11967895678','1194567890',2),
+('Vanin@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48478','56','SP','Santana','57899452','44469',12,11,2000,'Hix','vanin','65264436472','1164499789','11467564567','11944895678','1194567890',3),
+('Vinicius@yahoo.com','av.marcio moteiro','av.marcio monteiro','a','Ribeirão Pires','453-47878','56','RJ','Santana','57899452','45769',04,12,2000,'Hix','vinicius','65269936472','1164799789','11967564567','11967895678','1194567890',6),
+('Catarine@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-58878','56','SP','Santana','57877452','45777',12,12,2010,'da silva','catarina','65277936472','1164799789','11967564567','11967895678','1194577890',8);
+
+Insert into jornal (dia,mes,ano,nome,edicao) values
+(01,01,2020,'jornal pam','1'),
+(02,02,2020,'jornal pam','2'),
+(22,03,2020,'jornal pam','3'),
+(02,04,2020,'jornal pam-edição especial','3,5'),
+(08,05,2020,'jornal pam','4'),
+(01,06,2020,'jornal pam','5'),
+(05,07,2020,'jornal pam-fique em casa','6');
+
+insert into impressao (mes,dia,ano,qtde,lote,codedicao) values
+(01,01,2020,10,'1',1),
+(12,01,2020,15,'2',1),
+(02,02,2020,40,'3',2),
+(22,03,2020,50,'4',3),
+(02,04,2020,10,'5',4),
+(08,05,2020,20,'6',5),
+(01,06,2020,23,'4',6),
+(05,07,2020,20,'8',7);
+
+Insert into materia (titulo,texto,dia,mes,ano,codRedator,codedicao,codCategoria) values
+('8 habilidades e competências que valorizam o currículo','Habilidades e competências mais valorizadas
+1. Comunicação
+Desenvoltura, coerência entre o discurso e a ação, objetividade, capacidade de transmitir ideias, bom português, capacidade de escutar.',01,01,2020,1,1,1),
+('Experiência como freelancer','Essa é uma habilidade para currículo que consegue condensar várias das soft skills mencionadas até aqui. Isso porque, normalmente, freelancers têm controle completo sobre suas atividades.',01,01,2020,2,2,2),
+('Autoconfiança','Não poderíamos deixar de falar da autoconfiança, não é mesmo? Não por acaso, um profissional que se apresenta seguro das próprias habilidades profissionais e como uma pessoa capaz de dar conta do recado é muito mais bem-sucedido do que aqueles que não o fazem.',02,02,2020,3,3,3),
+('Capacidade de análise','Analisar, comparar, dar valor aos fatos, sintetizar, organizar as ideias, considerar as alternativas e suas possíveis consequências sem uma supervisão direta também é uma super-habilidade para se ter.',22,03,2020,4,4,4),
+('O QUE É OU PODE SER CONSIDERADO UMA PESSOA PROATIVA','https://www.ibccoaching.com.br/portal/o-que-e-ou-pode-ser-considerado-uma-pessoa-proativa/',02,04,2020,5,5,5),
+('Comentários ao tema de redação do TRF-4: “Proatividade: uma felicidade prometida”','https://www.estrategiaconcursos.com.br/blog/comentarios-ao-tema-de-redacao-do-trf-4-proatividade-uma-felicidade-prometida/',08,05,2020,5,6,6),
+('2 DISCOS RIGIDOS UM SISTEMA OPERACIONAL EM CADA UM','https://www.vivaolinux.com.br/topico/Suporte/2-discos-rigidos-um-sistema-operacional-em-cada-um',01,06,2020,1,7,7),
+('JavaScript','https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',05,07,2020,2,2,7);
+
+Insert into trabalha (codFuncionario,codedicao) values
+(1,1),
+(5,2),
+(1,1),
+(1,2),
+(3,3),
+(1,5),
+(1,2),
+(6,2),
+(2,3),
+(2,4),
+(4,2),
+(5,5),
+(5,6),
+(5,7);
