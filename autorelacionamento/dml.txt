@@ -1,0 +1,85 @@
+Insert into funcionario(email,rua,logradouro,complemento,cidade,cep,num,uf,bairro,rg,nasDia,dasMes,nasAno,sobrenome,nome,cpf,telFixo,telCel,telRecado,telOutro) values
+('Mari@gmail.com','av.francisco moteiro','av.francisco moteiro','b','Ribeirão Pires','453-45678','56','SP','Santana','57839452',12,12,2000,'Felix','Maria','65264836472','1164736789','11967564567','11967895678','1194567890'),
+
+('Valder@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48878','56','SP','Santana','57899452',12,12,2000,'Hix','valder','65269936472','1164799789','11967564567','11967895678','1194567890'),
+
+('Vanin@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48478','56','SP','Santana','57899452',12,11,2000,'Hix','vanin','65264436472','1164499789','11467564567','11944895678','1194567890'),
+
+('Vinicius@yahoo.com','av.marcio moteiro','av.marcio monteiro','a','Ribeirão Pires','453-47878','56','RJ','Santana','57899452',04,12,2000,'Hix','vinicius','65269936472','1164799789','11967564567','11967895678','1194567890'),
+
+('Catarine@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-58878','56','SP','Santana','57877452',12,12,2010,'da silva','catarina','65277936472','1164799789','11967564567','11967895678','1194577890');
+
+
+Insert into fornecedor(num,cidade,cep,bairro,rua,uf,email,cnpj,tel,nome,descricao) values
+('25','rio de janeiro','258-25896','acari','rua Bahia','RJ','npao@gmail.com','000123450001','94756-1010','Pãozinho','comida'
+),
+('25','rio de janeiro','258-25896','acari','rua Bahia','RJ','npao@gmail.com','000123450001','94756-1010','Atacado','comida'
+),
+('25','rio de janeiro','258-25896','acari','rua Bahia','RJ','npao@gmail.com','000123450001','94756-1010','Vila Doce Alimentos','comida'
+),
+('25','rio de janeiro','258-25896','acari','rua Bahia','RJ','npao@gmail.com','000123450001','94756-1010','Macaron','comida'
+);
+
+Insert into cliente(email,rua,logradouro,complemento,cidade,cep,num,uf,bairro,rg,nasDia,nasMes,nasAno,sobrenome,nome,cpf,telFixo,telCel,telRecado,telOutro) values
+('Mari@gmail.com','av.francisco moteiro','av.francisco moteiro','b','Ribeirão Pires','453-45678','56','SP','Santana','57839452',12,12,2000,'Mirio','Sorocaba','65264836472','1164736789','11967564567','11967895678','1194567890'),
+
+('Valder@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48878','56','SP','Santana','57899452',12,12,2000,'Hix','Max','65269936472','1164799789','11967564567','11967895678','1194567890'),
+
+('Vanin@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-48478','56','SP','Santana','57899452',12,11,2000,'Hix','Carminha','65264436472','1164499789','11467564567','11944895678','1194567890'),
+
+('Vinicius@yahoo.com','av.marcio moteiro','av.marcio monteiro','a','Ribeirão Pires','453-47878','56','RJ','Santana','57899452',04,12,2000,'Maria','Vanessa','65269936472','1164799789','11967564567','11967895678','1194567890'),
+
+('Catarine@yahoo.com','av.marcio moteiro','av.marcio monteiro','b','Ribeirão Pires','453-58878','56','SP','Santana','57877452',12,12,2010,'da silva','Enzo','65277936472','1164799789','11967564567','11967895678','1194577890');
+
+
+Insert into marca(email,cnpj,tel,nome) values
+('npao@gmail.com','000123450001','94756-1010','Puma'
+),
+('npao@gmail.com','000123450001','94756-1010','Nestle'
+),
+('npao@gmail.com','000123450001','94756-1010','Camil'
+),
+('npao@gmail.com','000123450001','94756-1010','Piracanjuba'
+);
+
+insert into documentos (tipo,descricao,codFuncionario) values
+('curriculo','curriculo 1',1),
+('atestado médico','atestado de falta',4),
+('atestado médico','atestado de falta',3);
+
+INSERT INTO `produto` (`nome`, `codProduto`, `preco`, `qtde`, `líquido`, `solido`, `perecivel`, `quilograma`, `litro`, `codFornecedor`, `codMarca`) VALUES
+('panetone', 6, '7.00', '0.00', NULL, 1, 1, 1, NULL, 2, 2),
+('macarrão', 7, '3.00', '0.00', NULL, 2, NULL, 2, NULL, 1, 2),
+('iogurte', 8, '2.00', '1.00', 1, NULL, 2, NULL, 1, 1, 2),
+('chocolate', 9, '4.00', '0.00', NULL, 3, NULL, 3, NULL, 2, 1),
+('leite', 10, '3.00', '1.00', 2, NULL, 3, NULL, 2, 3, 4),
+('pão de forma', 11, '4.00', '0.00', NULL, 4, 4, 4, NULL, 4, 3),
+('bolacha', 12, '3.00', '1.00', 2, NULL, 3, NULL, 2, 3, 4),
+('carne', 13, '4.00', '0.00', NULL, 4, 4, 4, NULL, 4, 3);
+
+SET FOREIGN_KEY_CHECKS=0;
+
+insert into fornece (codProduto,codFornecedor) values
+(1,1),
+(2,2),
+(3,3),
+(1,1),
+(3,1),
+(2,2);
+
+insert into compra (dia,mes,ano,hora,minuto,precoTotal,codCliente,codFuncionario) values
+(11,02,2020,11,50,50.20,1,1),
+(11,02,2020,08,50,50.20,3,2),
+(11,02,2020,12,50,50.20,2,3),
+(11,02,2020,14,50,50.20,4,4);
+
+insert into relacao (qtde,codProduto,codCompra,precoUni) values
+(5,1,1,10),
+(1,2,1,20),
+(3,3,1,15),
+(5,5,2,50),
+(4,4,3,50),
+(5,6,3,50),
+(5,4,4,50);
+
+

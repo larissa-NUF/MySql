@@ -1,0 +1,130 @@
+CREATE TABLE funcionario(
+email varchar(255),
+rua varchar(255),
+logradouro varchar(255),
+complemento varchar(255),
+cidade varchar(255),
+cep varchar(255),
+num varchar(255),
+uf varchar(255),
+bairro varchar(255),
+rg varchar(255),
+codFuncionario int PRIMARY KEY auto_increment,
+nasDia int,
+dasMes int,
+nasAno int,
+sobrenome varchar(255),
+nome varchar(255),
+cpf varchar(255),
+telFixo varchar(255),
+telCel varchar(255),
+telRecado varchar(255),
+telOutro varchar(255)
+);
+
+CREATE TABLE fornecedor (
+num varchar(255),
+cidade varchar(255),
+cep varchar(255),
+logradouro varchar(255),
+bairro varchar(255),
+complemento varchar(255),
+rua varchar(255),
+uf char(2),
+codFornecedor int PRIMARY KEY auto_increment,
+email varchar(255),
+cnpj varchar(255),
+tel varchar(255),
+nome varchar(255),
+descricao varchar(255)
+);
+
+CREATE TABLE cliente (
+sobrenome varchar(255),
+nome varchar(255),
+cidade varchar(255),
+cep varchar(255),
+logradouro varchar(255),
+rua varchar(255),
+uf char(2),
+num varchar(255),
+bairro varchar(255),
+complemento varchar(255),
+nasDia int,
+nasMes int,
+nasAno int,
+telFixo varchar(255),
+telCel varchar(255),
+telRecado varchar(255),
+telOutro varchar(255),
+cpf varchar(255),
+email varchar(255),
+codCliente int PRIMARY KEY auto_increment,
+rg varchar(255)
+);
+
+CREATE TABLE marca (
+tel varchar(255),
+codMarca int PRIMARY KEY auto_increment,
+nome varchar(255),
+cnpj varchar(255),
+email varchar(255)
+);
+
+CREATE TABLE documentos (
+tipo varchar(255),
+descricao varchar(255),
+codDoc int PRIMARY KEY auto_increment,
+codFuncionario int,
+FOREIGN KEY(codFuncionario) REFERENCES funcionario (codFuncionario)
+);
+
+CREATE TABLE `produto` (
+  `nome` varchar(50),
+  `codProduto` int(11) primary key auto_increment,
+  `preco` decimal(7,2),
+  `qtde` decimal(7,2),
+  `líquido` int(11) NULL,
+  `solido` int(11) NULL,
+  `perecivel` int(11) NULL,
+  `quilograma` int(11) NULL,
+  `litro` int(11) NULL,
+  `codFornecedor` int(11),
+  `codMarca` int(11)
+);
+
+CREATE TABLE fornece (
+codFornecedor int,
+codProduto int,
+FOREIGN KEY(codFornecedor) REFERENCES fornecedor (codFornecedor) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(codProduto) REFERENCES produto (codProduto) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE compra (
+dia int,
+mes int,
+ano int,
+hora int,
+minuto int,
+precoTotal decimal(7,2),
+codCompra int PRIMARY KEY auto_increment,
+codCliente int,
+codFuncionario int,
+FOREIGN KEY (codCliente) REFERENCES cliente (codCliente),
+FOREIGN KEY (codFuncionario) REFERENCES funcionario (codFuncionario)
+);
+
+CREATE TABLE relacao (
+qtde int,
+codProduto int,
+codCompra int,
+precoUni decimal(7,2),
+FOREIGN KEY(codProduto) REFERENCES produto (codProduto),
+FOREIGN KEY(codCompra) REFERENCES compra (codCompra)
+);
+
+
+ALTER TABLE produto ADD FOREIGN KEY(codMarca) REFERENCES marca (codMarca);
+ALTER TABLE produto ADD FOREIGN KEY(codFornecedor) REFERENCES fornecedor (codFornecedor);
+
+
